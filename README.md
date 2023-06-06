@@ -19,8 +19,10 @@ The goal of this competition is to predict the course of Parkinson's disease (PD
 ### The trend in the visit_month column of the train_clinical_data
 We plot a line graph of the average UPDRS scores (i.e., updrs_1, updrs_2, updrs_3, and updrs_4) against the visit_month, shown below.
 ![image](https://github.com/hyguozz/Parkinson-s-Disease-Progression-Prediction/assets/36547524/4e6d538c-3274-47bb-bbe6-f77e98bd5f66)
+
 ### The analysis of the frequence of visit_month
 ![image](https://github.com/hyguozz/Parkinson-s-Disease-Progression-Prediction/assets/36547524/80eace80-b348-4a9c-a15e-b66a9467d134)
+
 In the figure above, the interval between visit_month is approximately 6 months until the 60th month, after which the data becomes sparse. This suggests that only a few patient_id have long-term records beyond 60 months. Therefore, we will focus only on the data from the 60 months prior to the current time period. Since the target of the prediction is from the current time point to 6, 6, 12 months, it would be helpful to include data up to 72 months to gather as much information as possible in our training dataset.
 ### Time series data construction
 We build the time series for each patient_id from train_df. As a result, for each patient_id, the time range for the patient's visits is [0,72], and the time interval is 6 months. Forward-fill missing values is used to propagate the most recent non-null value forward in time. 
