@@ -46,7 +46,7 @@ A subset of UniProt, which are shared in all visit_id samples are selected.
 ![image](https://github.com/hyguozz/Parkinson-s-Disease-Progression-Prediction/assets/36547524/38eef5b7-453d-4287-a909-73e9dc8131a3)
 
 
-#Feature extractoin of UniProt-Peptides Network
+# Feature extractoin of UniProt-Peptides Network
 Principal component analysis (PCA) is used to extract the most important components of the Protein-Peptides network. These components could then be used as features for downstream analysis.
 
 # Deep learning model
